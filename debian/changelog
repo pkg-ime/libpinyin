@@ -1,0 +1,5 @@
+libpinyin (0.5.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #658144)
+
+ -- Aron Xu <aron@debian.org>  Wed, 01 Feb 2012 03:21:39 +0800

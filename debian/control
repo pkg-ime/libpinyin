@@ -1,0 +1,47 @@
+Source: libpinyin
+Priority: optional
+Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Uploaders: Aron Xu <aron@debian.org>, YunQiang Su <wzssyqa@gmail.com>
+DM-Upload-Allowed: yes
+Build-Depends: debhelper (>= 8.1.3~), autotools-dev,
+    libglib2.0-dev, libdb4.8-dev
+Standards-Version: 3.9.2
+Section: libs
+Homepage: http://github.com/libpinyin
+Vcs-Git: git://git.debian.org/pkg-ime/libpinyin.git
+Vcs-Browser: http://git.debian.org/?p=pkg-ime/libpinyin.git
+
+Package: libpinyin0-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libpinyin0 (= ${binary:Version})
+Provides: libpinyin-dev
+Conflicts: libpinyin-dev
+Description: library to deal with pinyin - development files
+ libpinyin is a set of core algorithms designed for intelligent
+ sentence-based Chinese pinyin input methods.
+ .
+ This package provides the library development files.
+
+Package: libpinyin0
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: libpinyin
+Description: library to deal with pinyin
+ libpinyin is a set of core algorithms designed for intelligent
+ sentence-based Chinese pinyin input methods.
+ .
+ This package provides the library files.
+
+Package: libpinyin0-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: ${misc:Depends}, libpinyin0 (= ${binary:Version}) 
+Description: library to deal with pinyin - debug symbols
+ libpinyin is a set of core algorithms designed for intelligent
+ sentence-based Chinese pinyin input methods.
+ .
+ This package provides the library debug symbols.
