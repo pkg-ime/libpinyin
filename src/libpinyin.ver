@@ -1,0 +1,32 @@
+LIBPINYIN {
+    global:
+        pinyin_init;
+        pinyin_save;
+        pinyin_set_double_pinyin_scheme;
+        pinyin_set_chewing_scheme;
+        pinyin_fini;
+        pinyin_set_options;
+        pinyin_alloc_instance;
+        pinyin_free_instance;
+        pinyin_guess_sentence;
+        pinyin_phrase_segment;
+        pinyin_get_sentence;
+        pinyin_parse_full_pinyin;
+        pinyin_parse_more_full_pinyins;
+        pinyin_parse_double_pinyin;
+        pinyin_parse_more_double_pinyins;
+        pinyin_parse_chewing;
+        pinyin_parse_more_chewings;
+        pinyin_in_chewing_keyboard;
+        pinyin_get_candidates;
+        pinyin_choose_candidate;
+        pinyin_clear_constraint;
+        pinyin_clear_constraints;
+        pinyin_translate_token;
+        pinyin_train;
+        pinyin_reset;
+        _ZN6pinyin10ChewingKey*;
+
+    local:
+	*;
+};
