@@ -1,0 +1,22 @@
+From: Aron Xu <aron@debian.org>
+Date: Wed, 1 Feb 2012 06:06:08 +0800
+Subject: [PATCH] fix-format-security
+
+---
+ src/storage/tag_utility.cpp |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/src/storage/tag_utility.cpp b/src/storage/tag_utility.cpp
+index 2f4626a..0ad676e 100644
+--- a/src/storage/tag_utility.cpp
++++ b/src/storage/tag_utility.cpp
+@@ -144,7 +144,7 @@ static gchar ** split_line(const gchar * line){
+             /* TODO: switch to own strdup_escape implementation
+                for \"->" transforming. */
+             token = g_strdup_printf(tmp);
+-            g_free(tmp);
++            g_free("%c",tmp);
+         } else {
+             /* handles other tokens. */
+             while(*cur) {
+-- 
