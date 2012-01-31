@@ -1,7 +1,14 @@
 #!/usr/bin/make -f
-export DEB_BUILD_MAINT_OPTIONS=hardening=-format
-LDFLAGS+=-Wl,--as-needed
 DEB_HOST_MULTIARCH?=$(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+LDFLAGS+=-Wl,--as-needed
+
+# Parallel build.
+ifeq ($(DEB_HOST_ARCH_OS),linux)
+    export DEB_BUILD_OPTIONS+=parallel=$(shell grep -c ^processor /proc/cpuinfo)
+endif
+
+# Disable format hardening for a short while.
+export DEB_BUILD_MAINT_OPTIONS=hardening=-format
 
 %:
 	dh $@
