@@ -29,16 +29,15 @@ Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Provides: libpinyin
-Suggests: libpinyin-bin
+Suggests: libpinyin-tools
 Description: library to deal with pinyin
  libpinyin is a set of core algorithms designed for intelligent
  sentence-based Chinese pinyin input methods.
  .
  This package provides the library files.
 
-Package: libpinyin-bin
+Package: libpinyin-tools
 Architecture: any
-Multi-Arch: foreign
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: library to deal with pinyin - additional tools
  libpinyin is a set of core algorithms designed for intelligent
