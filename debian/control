@@ -36,18 +36,6 @@ Description: library to deal with pinyin
  .
  This package provides the library files.
 
-Package: libpinyin-tools
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: library to deal with pinyin - additional tools
- libpinyin is a set of core algorithms designed for intelligent
- sentence-based Chinese pinyin input methods.
- .
- This package provides following tools of libpinyin:
-  * gen_binary_files
-  * gen_unigram
-  * import_interpolation
-
 Package: libpinyin0-dbg
 Section: debug
 Priority: extra

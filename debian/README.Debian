@@ -1,0 +1,22 @@
+libpinyin for Debian
+----------------------------
+
+  libpinyin ships three executable binaries along with the libraries
+  themselves, they are put into /usr/lib/libpinyin/tools in libpinyin-dev
+  package.
+  
+  The reason is these three tools aren't meant to be standalone tools for
+  ordinary users, but being used only when someone really need to rebuild
+  retrain the data. And these three tools must be run one by one, with a
+  fixed procedure:
+
+  /usr/lib/libpinyin/tools/gen_binary_files --table-dir /path/to/data
+  /usr/lib/libpinyin/tools/import_interpolation < /path/to/data/interpolation.text
+  /usr/lib/libpinyin/tools/gen_unigram
+  
+  If the sequence is not satisfied, then the latter two commands will fail
+  with segmentation fault. This is designed as it by upstream, don't report
+  bugs to Debian BTS. If you want to change this behaviour, please contact
+  upstream.
+
+ -- Aron Xu <aron@debian.org>  Thu, 22 Sep 2011 10:38:18 +0800
